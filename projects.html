@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Projects - CuboidMC</title>
+  <style>
+    /* Reset & CSS Variables */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-color: #0d0d0d;
+      --card-bg: #181818;
+      --accent-red: #ff2a2a;
+      --accent-hover: #e02020;
+      --text-white: #ffffff;
+      --text-gray: #a0a0a0;
+      --font-pixel: 'Courier New', Courier, monospace;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-white);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 8%;
+      background-color: rgba(13, 13, 13, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid var(--accent-red);
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+    }
+
+    .brand-logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      font-family: var(--font-pixel);
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--accent-red);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--text-white);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-red);
+    }
+
+    /* Main Container */
+    .content-container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .page-title {
+      font-family: var(--font-pixel);
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: var(--text-white);
+      text-transform: uppercase;
+    }
+
+    .page-title span {
+      color: var(--accent-red);
+    }
+
+    .page-subtitle {
+      text-align: center;
+      color: var(--text-gray);
+      margin-bottom: 3.5rem;
+      font-size: 1.1rem;
+    }
+
+    /* Project Category Sections */
+    .project-category-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .category-title {
+      font-family: var(--font-pixel);
+      font-size: 1.6rem;
+      color: var(--accent-red);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #282828;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      padding: 2rem;
+      border-left: 4px solid var(--accent-red);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 1px solid #282828;
+      border-right: 1px solid #282828;
+      border-bottom: 1px solid #282828;
+      transition: border-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-red);
+    }
+
+    /* Tags Base Styling */
+    .tag {
+      display: inline-block;
+      align-self: flex-start;
+      background-color: rgba(255, 42, 42, 0.2);
+      color: var(--accent-red);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      margin-right: 0.3rem;
+    }
+
+    .tag.wip {
+      background-color: rgba(255, 165, 0, 0.2);
+      color: orange;
+    }
+
+    .tag.server {
+      background-color: rgba(0, 0, 255, 0.2);
+      color: #ADD8E6;
+    }
+
+    .tag.mod {
+      background-color: rgba(42, 255, 42, 0.2);
+      color: #2aff2a;
+    }
+
+    .tag.plugin-rp {
+      background-color: rgba(255, 255, 153, 0.2);
+      color: #FADB14;
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-card p {
+      color: var(--text-gray);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      background-color: var(--accent-red);
+      color: var(--text-white);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      font-family: var(--font-pixel);
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-small {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      align-self: flex-start;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #282828;
+      color: var(--text-gray);
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="brand-logo">
+      <img src="cuboidimage.png" alt="CuboidMC Logo">
+      <span class="logo-text">CuboidMC</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html#services">What We Do</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-container">
+    <a href="index.html" style="color: var(--text-gray); text-decoration: none; font-weight: 600;">&larr; Back to Home</a>
+    <br><br>
+
+    <h1 class="page-title">CuboidMC <span>Projects</span></h1>
+    <p class="page-subtitle">Explore our collection of Minecraft mods, Hypixel Housing experiences, plugins, and custom creations.</p>
+
+    <div class="project-category-section">
+      <h2 class="category-title">⚡ In Development</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div>
+            <span class="tag wip">In Development</span>
+            <span class="tag mod">Mod</span>
+            <h3>Ore Expansion</h3>
+            <p>An upcoming Minecraft mod designed to enhance underground exploration by introducing a massive variety of new ores, items, and crafting possibilities.</p>
+          </div>
+          <a href="ore-expansion.html" class="btn btn-small">View Project &rarr;</a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <span class="tag wip">In Development</span>
+            <span class="tag server">Server</span>
+            <h3>PulsarMC</h3>
+            <p>Classified project currently under active development. Stay tuned for details!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="project-category-section">
+      <h2 class="category-title">🎮 Released Experiences</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div>
+            <span class="tag">Hypixel Housing</span>
+            <h3>The Backrooms Experience | 2.0</h3>
+            <p>An immersive Hypixel Housing experience that brought the terrifying Backrooms directly into Minecraft.</p>
+          </div>
+          <a href="backrooms.html" class="btn btn-small">View Project &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CuboidMC. All rights reserved. Not affiliated with Mojang Studios.</p>
+  </footer>
+
+</body>
+</html>

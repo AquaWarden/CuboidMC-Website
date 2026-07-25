@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ore Expansion - CuboidMC</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-color: #0d0d0d;
+      --card-bg: #181818;
+      --accent-red: #ff2a2a;
+      --accent-hover: #e02020;
+      --text-white: #ffffff;
+      --text-gray: #a0a0a0;
+      --font-pixel: 'Courier New', Courier, monospace;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-white);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 8%;
+      background-color: rgba(13, 13, 13, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid var(--accent-red);
+    }
+
+    .logo {
+      font-family: var(--font-pixel);
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--accent-red);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--text-white);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-red);
+    }
+
+    .content-container {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .tag.wip {
+      display: inline-block;
+      background-color: rgba(255, 165, 0, 0.2);
+      color: orange;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: var(--font-pixel);
+      font-size: 2.8rem;
+      color: var(--accent-red);
+      margin-bottom: 1.5rem;
+    }
+
+    .project-details {
+      background-color: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 8px;
+      border: 1px solid #282828;
+      margin-bottom: 2rem;
+    }
+
+    .project-details h2 {
+      font-family: var(--font-pixel);
+      color: var(--text-white);
+      margin: 1.5rem 0 0.8rem 0;
+    }
+
+    .project-details p {
+      color: var(--text-gray);
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      background-color: var(--accent-red);
+      color: var(--text-white);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      font-family: var(--font-pixel);
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #282828;
+      color: var(--text-gray);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">CuboidMC</a>
+    <nav>
+      <ul>
+        <li><a href="index.html#services">What We Do</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-container">
+    <a href="index.html#projects" style="color: var(--text-gray); text-decoration: none; font-weight: 600;">&larr; Back to Projects</a>
+    <br><br>
+    
+    <span class="tag wip">In Development</span>
+    <h1>Ore Expansion Mod</h1>
+
+    <div class="project-details">
+      <h2>Project Overview</h2>
+      <p><strong>Ore Expansion</strong> is a Minecraft Mod in active development that adds new ores, tools, and more to the game. It makes the player want to strongly progress through the game and enjoy more of Minecraft with friends, for these new ores can be rare and common, but it adds more fun nevertheless.</p>
+
+      <h2>What to Expect</h2>
+      <p>&bull; <strong>Tons of New Ores:</strong> Discover rare metals and magical crystals deep within underground caverns.</p>
+      <p>&bull; <strong>Expanded Crafting Trees:</strong> Use newly mined resources to forge custom weapons, tools, and armor sets.</p>
+      <p>&bull; <strong>Unique World Generation:</strong> Custom vein spawning algorithms to encourage deep cave exploration.</p>
+
+      <h2>Development Status</h2>
+      <p>This mod is currently in active creation. Stay tuned for sneak peeks, beta testing announcements, and release details!</p>
+    </div>
+
+    <a href="index.html#projects" class="btn">Explore Other Projects</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CuboidMC. All rights reserved. Not affiliated with Mojang Studios.</p>
+  </footer>
+
+</body>
+</html>

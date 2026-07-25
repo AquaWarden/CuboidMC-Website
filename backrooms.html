@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Backrooms Experience | 2.0 - CuboidMC</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-color: #0d0d0d;
+      --card-bg: rgba(24, 24, 24, 0.88);
+      --accent-red: #ff2a2a;
+      --accent-hover: #e02020;
+      --text-white: #ffffff;
+      --text-gray: #d0d0d0;
+      --font-pixel: 'Courier New', Courier, monospace;
+    }
+
+    body {
+      color: var(--text-white);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      background-color: #0d0d0d;
+    }
+
+    /* Background Container */
+    .bg-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      /* Fixed to .png here! */
+      background-image: linear-gradient(rgba(13, 13, 13, 0.7), rgba(13, 13, 13, 0.85)), url('bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 8%;
+      background-color: rgba(13, 13, 13, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid var(--accent-red);
+    }
+
+    .logo {
+      font-family: var(--font-pixel);
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--accent-red);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--text-white);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-red);
+    }
+
+    .content-container {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: rgba(255, 42, 42, 0.3);
+      color: var(--accent-red);
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      border: 1px solid var(--accent-red);
+    }
+
+    h1 {
+      font-family: var(--font-pixel);
+      font-size: 2.8rem;
+      color: var(--accent-red);
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    }
+
+    .project-details {
+      background-color: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 8px;
+      border: 1px solid #333333;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    }
+
+    .project-details h2 {
+      font-family: var(--font-pixel);
+      color: var(--text-white);
+      margin: 1.5rem 0 0.8rem 0;
+    }
+
+    .project-details p {
+      color: var(--text-gray);
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      background-color: var(--accent-red);
+      color: var(--text-white);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      font-family: var(--font-pixel);
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(13, 13, 13, 0.95);
+      border-top: 1px solid #282828;
+      color: var(--text-gray);
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-wrapper"></div>
+
+  <header>
+    <a href="index.html" class="logo">CuboidMC</a>
+    <nav>
+      <ul>
+        <li><a href="index.html#services">What We Do</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-container">
+    <a href="index.html#projects" style="color: #ffffff; text-decoration: none; font-weight: 600; text-shadow: 1px 1px 2px #000;">&larr; Back to Projects</a>
+    <br><br>
+    
+    <span class="tag">Hypixel Housing</span>
+    <h1>The Backrooms Experience | 2.0</h1>
+
+    <div class="project-details">
+      <h2>About The Project</h2>
+      <p><strong>Orginally a small independent project</strong>, The Backrooms Experience 2.0 is a Hypixel Housing bringing the horrifying BACKROOMS to Minecraft.</p>
+
+      <h3>Key Features</h3>
+      <p>&bull; Custom-built liminal environments capturing the uncanny feel of Level 0 and beyond.</p>
+      <p>&bull; Interactive housing mechanics and tailored player navigation system.</p>
+      <p>&bull; Tons of levels to explore.</p>
+      <p>&bull; Mysterious entities who find you curious.</p>
+
+      <h3>Platform & Availability</h3>
+      <p>This experience was hosted on the Hypixel Network via Hypixel Housing.</p>
+
+      <h3>How to join</h3>
+      <p>You can join this housing using the following steps:</p>
+      <p>1. Make sure you are on Java edition</p>
+      <p>2. Click on the Multiplayer button then click "Add Server"</p>
+      <p>3. In the text box under "Server Name", write whatever. In the text box
+under "Server IP", write "mc.hypixel.net".</p>
+      <p>4. Join the server, then navigate and right click the compass.</p>
+      <p>5. Click on the dark oak door labeled, "Housing".</p>
+      <p>6. In the commands menu, do "/visit AquaWarden", then click on the gold ingot.</p>
+<p>You can now play!</p>
+    </div>
+      
+    <a href="index.html#projects" class="btn">Explore Other Projects</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CuboidMC. All rights reserved. Not affiliated with Mojang Studios.</p>
+  </footer>
+
+</body>
+</html>
