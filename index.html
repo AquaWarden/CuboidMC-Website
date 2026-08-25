@@ -301,6 +301,27 @@
       color: var(--text-gray);
       line-height: 1.4;
     }
+    /* Video Section */
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #282828;
+      box-shadow: 0 0 20px rgba(255, 42, 42, 0.15);
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
     /* Footer */
     footer {
@@ -404,6 +425,26 @@
       <a href="projects.html" class="btn">View All Projects &rarr;</a>
     </div>
 
+  </section>
+<hr style="border: 0; height: 1px; background: #282828; width: 84%; margin: 0 auto;">
+
+  <!-- Video Section -->
+  <section id="videos">
+    <h2 class="section-title">Latest <span>Videos</span></h2>
+    <div class="video-container">
+      <!-- Replace the src URL with your specific YouTube video embed link -->
+      <iframe 
+        src="https://www.youtube.com/watch?v=VfX-RaMPvjQ" 
+        title="The Backrooms Experience | 2.0 Offical Trailer" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="https://www.youtube.com/@Cuboid-MC" target="_blank" rel="noopener noreferrer" class="btn">
+        Subscribe on YouTube &rarr;
+      </a>
+    </div>
   </section>
 
   <hr style="border: 0; height: 1px; background: #282828; width: 84%; margin: 0 auto;">
