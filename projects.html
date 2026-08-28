@@ -134,7 +134,6 @@
     .project-card {
       background-color: var(--card-bg);
       border-radius: 8px;
-      padding: 2rem;
       border-left: 4px solid var(--accent-red);
       display: flex;
       flex-direction: column;
@@ -143,11 +142,28 @@
       border-right: 1px solid #282828;
       border-bottom: 1px solid #282828;
       transition: border-color 0.3s ease, transform 0.2s ease;
+      overflow: hidden;
     }
 
     .project-card:hover {
       transform: translateY(-3px);
       border-color: var(--accent-red);
+    }
+
+    /* Project Banner Image */
+    .project-card-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-card-content {
+      padding: 1.5rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
     }
 
     /* Tags Base Styling */
@@ -240,6 +256,7 @@
 </head>
 <body>
 
+  <!-- Navigation -->
   <header>
     <a href="index.html" class="brand-logo">
       <img src="cuboidimage.png" alt="CuboidMC Logo">
@@ -256,6 +273,7 @@
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main class="content-container">
     <a href="index.html" style="color: var(--text-gray); text-decoration: none; font-weight: 600;">&larr; Back to Home</a>
     <br><br>
@@ -263,43 +281,57 @@
     <h1 class="page-title">CuboidMC <span>Projects</span></h1>
     <p class="page-subtitle">Explore our collection of Minecraft mods, Hypixel Housing experiences, plugins, and custom creations.</p>
 
+    <!-- SECTION 1: IN DEVELOPMENT -->
     <div class="project-category-section">
       <h2 class="category-title">⚡ In Development</h2>
       <div class="projects-grid">
 
+        <!-- Ore Expansion -->
         <div class="project-card">
-          <div>
-            <span class="tag wip">In Development</span>
-            <span class="tag mod">Mod</span>
-            <h3>Ore Expansion</h3>
-            <p>An upcoming Minecraft mod designed to enhance underground exploration by introducing a massive variety of new ores, items, and crafting possibilities.</p>
+          <img src="cuboidimage.png" alt="Ore Expansion Banner" class="project-card-image">
+          <div class="project-card-content">
+            <div>
+              <span class="tag wip">In Development</span>
+              <span class="tag mod">Mod</span>
+              <h3>Ore Expansion</h3>
+              <p>An upcoming Minecraft mod designed to enhance underground exploration by introducing a massive variety of new ores, items, and crafting possibilities.</p>
+            </div>
+            <a href="ore-expansion.html" class="btn btn-small">View Project &rarr;</a>
           </div>
-          <a href="ore-expansion.html" class="btn btn-small">View Project &rarr;</a>
         </div>
 
+        <!-- PulsarMC -->
         <div class="project-card">
-          <div>
-            <span class="tag wip">In Development</span>
-            <span class="tag server">Server</span>
-            <h3>PulsarMC</h3>
-            <p>Classified project currently under active development. Stay tuned for details!</p>
+          <img src="cuboidimage.png" alt="PulsarMC Banner" class="project-card-image">
+          <div class="project-card-content">
+            <div>
+              <span class="tag wip">In Development</span>
+              <span class="tag server">Server</span>
+              <h3>PulsarMC</h3>
+              <p>Classified project currently under active development. Stay tuned for details!</p>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
 
+    <!-- SECTION 2: RELEASED EXPERIENCES -->
     <div class="project-category-section">
       <h2 class="category-title">🎮 Released Experiences</h2>
       <div class="projects-grid">
 
+        <!-- The Backrooms Experience -->
         <div class="project-card">
-          <div>
-            <span class="tag">Hypixel Housing</span>
-            <h3>The Backrooms Experience | 2.0</h3>
-            <p>An immersive Hypixel Housing experience that brought the terrifying Backrooms directly into Minecraft.</p>
+          <img src="bg.png" alt="The Backrooms Banner" class="project-card-image">
+          <div class="project-card-content">
+            <div>
+              <span class="tag">Hypixel Housing</span>
+              <h3>The Backrooms Experience | 2.0</h3>
+              <p>An immersive Hypixel Housing experience that brought the terrifying Backrooms directly into Minecraft.</p>
+            </div>
+            <a href="backrooms.html" class="btn btn-small">View Project &rarr;</a>
           </div>
-          <a href="backrooms.html" class="btn btn-small">View Project &rarr;</a>
         </div>
 
       </div>
@@ -307,6 +339,7 @@
 
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2026 CuboidMC. All rights reserved. Not affiliated with Mojang Studios.</p>
   </footer>

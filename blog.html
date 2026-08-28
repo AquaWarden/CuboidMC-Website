@@ -34,28 +34,42 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 8%;
-      background-color: rgba(13, 13, 13, 0.9);
+      padding: 1rem 8%;
+      background-color: rgba(13, 13, 13, 0.95);
       position: sticky;
       top: 0;
       z-index: 100;
       border-bottom: 2px solid var(--accent-red);
     }
 
-    .logo {
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+    }
+
+    .brand-logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      object-fit: contain;
+    }
+
+    .logo-text {
       font-family: var(--font-pixel);
       font-size: 1.8rem;
       font-weight: bold;
       color: var(--accent-red);
       letter-spacing: 2px;
       text-transform: uppercase;
-      text-decoration: none;
     }
 
     nav ul {
       display: flex;
       list-style: none;
       gap: 2rem;
+      align-items: center;
     }
 
     nav a {
@@ -158,6 +172,7 @@
     .post-tags {
       display: flex;
       gap: 0.5rem;
+      flex-wrap: wrap;
     }
 
     .tag {
@@ -191,6 +206,7 @@
 </head>
 <body>
 
+  <!-- Navigation -->
   <header>
     <a href="index.html" class="brand-logo">
       <img src="cuboidimage.png" alt="CuboidMC Logo">
@@ -207,10 +223,12 @@
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main class="blog-container">
     <h1 class="page-title">Developer <span>Blog</span></h1>
     <p class="subtitle">Behind-the-scenes insights, development logs, and design breakdowns from the team.</p>
 
+    <!-- Blog Post Article -->
     <article class="blog-post">
       <div class="post-header">
         <div class="author-info">
@@ -230,10 +248,9 @@
       </div>
     </article>
 
-
-
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2026 CuboidMC. All rights reserved. Not affiliated with Mojang Studios.</p>
   </footer>
