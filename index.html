@@ -196,14 +196,39 @@
     .project-card {
       background-color: var(--card-bg);
       border-radius: 8px;
-      padding: 2rem;
       border-left: 4px solid var(--accent-red);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      border-top: 1px solid #282828;
+      border-right: 1px solid #282828;
+      border-bottom: 1px solid #282828;
+      transition: border-color 0.3s ease, transform 0.2s ease;
+      overflow: hidden;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-red);
+    }
+
+    .project-card-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-card-content {
+      padding: 1.5rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
     }
 
     .tag {
+      display: inline-block;
       align-self: flex-start;
       background-color: rgba(255, 42, 42, 0.2);
       color: var(--accent-red);
@@ -301,6 +326,7 @@
       color: var(--text-gray);
       line-height: 1.4;
     }
+
     /* Video Section */
     .video-container {
       max-width: 800px;
@@ -337,7 +363,6 @@
         flex-direction: column;
         gap: 1rem;
       }
-
       .hero h1 {
         font-size: 2.5rem;
       }
@@ -346,6 +371,7 @@
 </head>
 <body>
 
+  <!-- Navigation -->
   <header>
     <a href="index.html" class="brand-logo">
       <img src="cuboidimage.png" alt="CuboidMC Logo">
@@ -353,15 +379,16 @@
     </a>
     <nav>
       <ul>
-        <li><a href="https://www.cuboidmc.com">Home</a></li>
-        <li><a href="https://www.cuboidmc.com/projects">Projects</a></li>
-        <li><a href="https://www.cuboidmc.com/blog">Blog</a></li>
-        <li><a href="https://www.cuboidmc.com#team">Team</a></li>
-        <li><a href="https://www.cuboidmc.com#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <img src="cuboidimage.png" alt="CuboidMC Cube Logo" class="hero-logo-img">
     <h1>CuboidMC</h1>
@@ -369,6 +396,7 @@
     <a href="#projects" class="btn">Explore Our Work</a>
   </section>
 
+  <!-- Services Section -->
   <section id="services">
     <h2 class="section-title">What We <span>Build</span></h2>
     <div class="services-grid">
@@ -397,42 +425,49 @@
 
   <hr style="border: 0; height: 1px; background: #282828; width: 84%; margin: 0 auto;">
 
+  <!-- Featured Projects Section -->
   <section id="projects">
     <h2 class="section-title">Featured <span>Projects</span></h2>
     <div class="projects-grid">
-      
+
+      <!-- The Backrooms Experience -->
       <div class="project-card">
-        <div>
-          <span class="tag">Hypixel Housing</span>
-          <h3>The Backrooms Experience | 2.0</h3>
-          <p>An immersive Hypixel Housing experience that brought the horrifing BACKROOMS to Minecraft.</p>
+        <img src="backrooms-banner.png" alt="The Backrooms Banner" class="project-card-image">
+        <div class="project-card-content">
+          <div>
+            <span class="tag">Hypixel Housing</span>
+            <h3>The Backrooms Experience | 2.0</h3>
+            <p>An immersive Hypixel Housing experience that brought the horrifing BACKROOMS to Minecraft.</p>
+          </div>
+          <a href="backrooms.html" class="btn btn-small">View Project &rarr;</a>
         </div>
-        <a href="backrooms.html" class="btn btn-small">View Project &rarr;</a>
       </div>
 
+      <!-- Ore Expansion -->
       <div class="project-card">
-        <div>
-          <span class="tag wip">In Development</span>
-          <h3>Ore Expansion</h3>
-          <p>An upcoming Minecraft mod designed to enhance underground exploration by introducing a massive variety of new ores, items, and crafting possibilities.</p>
+        <img src="ore-expansion-banner.png" alt="Ore Expansion Banner" class="project-card-image">
+        <div class="project-card-content">
+          <div>
+            <span class="tag wip">In Development</span>
+            <h3>Ore Expansion</h3>
+            <p>An upcoming Minecraft mod designed to enhance underground exploration by introducing a massive variety of new ores, items, and crafting possibilities.</p>
+          </div>
+          <a href="ore-expansion.html" class="btn btn-small">View Project &rarr;</a>
         </div>
-        <a href="ore-expansion.html" class="btn btn-small">View Project &rarr;</a>
       </div>
 
     </div>
-
     <div style="text-align: center; margin-top: 2.5rem;">
       <a href="projects.html" class="btn">View All Projects &rarr;</a>
     </div>
-
   </section>
-<hr style="border: 0; height: 1px; background: #282828; width: 84%; margin: 0 auto;">
+
+  <hr style="border: 0; height: 1px; background: #282828; width: 84%; margin: 0 auto;">
 
   <!-- Video Section -->
   <section id="videos">
     <h2 class="section-title">Latest <span>Videos</span></h2>
     <div class="video-container">
-      <!-- Replace the src URL with your specific YouTube video embed link -->
       <iframe 
         src="https://www.youtube.com/embed/VfX-RaMPvjQ" 
         title="The Backrooms Experience | 2.0 Offical Trailer" 
@@ -449,6 +484,7 @@
 
   <hr style="border: 0; height: 1px; background: #282828; width: 84%; margin: 0 auto;">
 
+  <!-- Team Section -->
   <section id="team">
     <h2 class="section-title">Meet The <span>Team</span></h2>
     <div class="team-grid">
@@ -485,12 +521,14 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" style="text-align: center;">
     <h2 class="section-title">Connect With <span>Us</span></h2>
     <p style="color: var(--text-gray); margin-bottom: 2rem;">Interested in collaborating or joining our community events?</p>
     <a href="https://www.youtube.com/@Cuboid-MC" target="_blank" class="btn">Follow us on Youtube</a>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2026 CuboidMC. All rights reserved. Not affiliated with Mojang Studios.</p>
   </footer>
