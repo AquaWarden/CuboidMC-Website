@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer Blog | CuboidMC</title>
+  <title>Blog & Development Updates - CuboidMC</title>
   <style>
     /* Reset & CSS Variables */
     * {
@@ -79,13 +79,13 @@
       transition: color 0.3s ease;
     }
 
-    nav a:hover, nav a.active {
+    nav a:hover {
       color: var(--accent-red);
     }
 
-    /* Layout */
-    .blog-container {
-      max-width: 900px;
+    /* Main Container */
+    .content-container {
+      max-width: 1100px;
       margin: 3rem auto;
       padding: 0 2rem;
     }
@@ -93,97 +93,106 @@
     .page-title {
       font-family: var(--font-pixel);
       font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
       color: var(--text-white);
       text-transform: uppercase;
-      margin-bottom: 0.5rem;
     }
 
     .page-title span {
       color: var(--accent-red);
     }
 
-    .subtitle {
+    .page-subtitle {
+      text-align: center;
       color: var(--text-gray);
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
+      font-size: 1.1rem;
     }
 
-    /* Blog Post Card */
-    .blog-post {
+    /* Blog Grid */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog-card {
       background-color: var(--card-bg);
       border-radius: 8px;
-      border: 1px solid #282828;
-      padding: 2.5rem;
-      margin-bottom: 2.5rem;
-      transition: border-color 0.3s ease;
+      border-left: 4px solid var(--accent-red);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 1px solid #282828;
+      border-right: 1px solid #282828;
+      border-bottom: 1px solid #282828;
+      transition: border-color 0.3s ease, transform 0.2s ease;
+      overflow: hidden;
     }
 
-    .blog-post:hover {
+    .blog-card:hover {
+      transform: translateY(-3px);
       border-color: var(--accent-red);
     }
 
-    .post-header {
+    .blog-card-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .blog-card-content {
+      padding: 1.5rem 2rem 2rem 2rem;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+      height: 100%;
     }
 
-    .author-info {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .author-avatar {
-      width: 35px;
-      height: 35px;
-      border-radius: 4px;
-      border: 1px solid var(--accent-red);
-      image-rendering: pixelated;
-    }
-
-    .author-name {
-      font-weight: bold;
-      color: var(--text-white);
-      font-size: 0.95rem;
-    }
-
-    .post-date {
+    .blog-meta {
       font-size: 0.85rem;
-      color: var(--text-gray);
-      font-family: var(--font-pixel);
-    }
-
-    .post-title {
-      font-size: 1.8rem;
       color: var(--accent-red);
-      margin-bottom: 1rem;
-      font-family: var(--font-pixel);
-    }
-
-    .post-body {
-      color: var(--text-gray);
-      margin-bottom: 1.5rem;
-      line-height: 1.7;
-    }
-
-    .post-tags {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .tag {
-      background-color: rgba(255, 42, 42, 0.15);
-      color: var(--accent-red);
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.8rem;
       font-weight: bold;
       text-transform: uppercase;
       font-family: var(--font-pixel);
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .blog-card p {
+      color: var(--text-gray);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      background-color: var(--accent-red);
+      color: var(--text-white);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      font-family: var(--font-pixel);
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-small {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      align-self: flex-start;
     }
 
     /* Footer */
@@ -224,30 +233,43 @@
   </header>
 
   <!-- Main Content -->
-  <main class="blog-container">
-    <h1 class="page-title">Developer <span>Blog</span></h1>
-    <p class="subtitle">Behind-the-scenes insights, development logs, and design breakdowns from the team.</p>
+  <main class="content-container">
+    <a href="index.html" style="color: var(--text-gray); text-decoration: none; font-weight: 600;">&larr; Back to Home</a>
+    <br><br>
 
-    <!-- Blog Post Article -->
-    <article class="blog-post">
-      <div class="post-header">
-        <div class="author-info">
-          <img src="AquaWarden.png" alt="AquaWarden" class="author-avatar">
-          <span class="author-name">AquaWarden</span>
+    <h1 class="page-title">CuboidMC <span>Blog</span></h1>
+    <p class="page-subtitle">Behind-the-scenes updates, project announcements, and development logs.</p>
+
+    <!-- Blog Posts Grid -->
+    <div class="blog-grid">
+
+      <!-- Blog Post 1 -->
+      <div class="blog-card">
+        <img src="ore-expansion-banner.png" alt="Ore Expansion Devlog Banner" class="blog-card-image">
+        <div class="blog-card-content">
+          <div>
+            <div class="blog-meta">Devlog #1 &bull; Minecraft Mods</div>
+            <h3>Ore Expansion Progress Update</h3>
+            <p>Take a deep dive into the development process behind our newest mod! Learn about newly added ores, underground mechanics, and crafting recipes.</p>
+          </div>
+          <a href="#" class="btn btn-small">Read Post &rarr;</a>
         </div>
-        <span class="post-date">July 25, 2026</span>
       </div>
-      <h2 class="post-title">TEST</h2>
-      <div class="post-body">
-        <p>TEST</p>
-      </div>
-      <div class="post-tags">
-        <span class="tag">DevLog</span>
-        <span class="tag">Level Design</span>
-        <span class="tag">TEST</span>
-      </div>
-    </article>
 
+      <!-- Blog Post 2 -->
+      <div class="blog-card">
+        <img src="backrooms-banner.png" alt="Backrooms 2.0 Update Banner" class="blog-card-image">
+        <div class="blog-card-content">
+          <div>
+            <div class="blog-meta">Announcement &bull; Hypixel Housing</div>
+            <h3>The Backrooms Experience 2.0 Release</h3>
+            <p>Our massive overhaul of The Backrooms Experience on Hypixel Housing is officially live. Check out what changes were made in this major update.</p>
+          </div>
+          <a href="#" class="btn btn-small">Read Post &rarr;</a>
+        </div>
+      </div>
+
+    </div>
   </main>
 
   <!-- Footer -->
