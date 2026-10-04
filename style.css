@@ -1,0 +1,32 @@
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      background-color: var(--accent-red);
+      color: var(--text-white);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      font-family: var(--font-pixel);
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-small {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+      align-self: flex-start;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #282828;
+      color: var(--text-gray);
+      font-size: 0.9rem;
+    }
