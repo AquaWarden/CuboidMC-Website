@@ -30,3 +30,7 @@
       color: var(--text-gray);
       font-size: 0.9rem;
     }
+
+    html {
+    scroll-behavior: smooth;
+    }
