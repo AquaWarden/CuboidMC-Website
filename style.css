@@ -48,7 +48,7 @@
   color: rgba(47, 47, 47, 0.95);
   text-decoration: none;
   display: block;
-  margin-bottom: 0.2rem; /* Controls the exact space between each link. Change to 0px if you want them touching. */
+  margin-bottom: 0.1rem; /* Controls the exact space between each link. Change to 0px if you want them touching. */
   transition: color 0.2s;
 }
 
@@ -76,6 +76,7 @@
       justify-content: space-between;
       align-items: flex-start;
       flex-wrap: wrap;
+      background-color: black;
     }
 
     footer p{
