@@ -23,18 +23,65 @@
       align-self: flex-start;
     }
 
+    .social-links {
+      text-align: left;
+      color:rgba(47, 47, 47, 0.95)
+    }
+
+    .social-links a {
+      color: rgba(47, 47, 47, 0.95);
+      display: flex;
+      text-decoration: none
+
+    }
+
+    .social-links a:hover {
+      color:#e02020
+    }
+
+    .pages {
+    text-align: right;  
+}
+
+
+.pages a {
+  color: rgba(47, 47, 47, 0.95);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.2rem; /* Controls the exact space between each link. Change to 0px if you want them touching. */
+  transition: color 0.2s;
+}
+
+.pages a:hover {
+  color: #e02020;
+}
+.copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  border-top: 1px solid #282828;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  clear: both;
+  width: 100%;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
       border-top: 1px solid #282828;
       color: var(--text-gray);
       font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    footer p{
+      color: #ffffff;
     }
 
     html {
     scroll-behavior: smooth;
-<<<<<<< HEAD
     }
-=======
-    }
->>>>>>> c4ca15e3432f6e1c1916171cfba810a3d066c35a
