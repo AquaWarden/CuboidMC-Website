@@ -58,7 +58,6 @@
 .copyright {
   grid-column: 1 / -1;
   text-align: center;
-  border-top: 1px solid #282828;
   padding-top: 1.5rem;
   margin-top: 1rem;
   font-size: 0.85rem;
