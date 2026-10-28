@@ -85,3 +85,14 @@
     html {
     scroll-behavior: smooth;
     }
+
+    @font-face {
+    font-family: 'MinecraftFont';
+    src: url('https://www.cuboidmc.com/fonts/MinecraftRegular-Bmg3.otf') format('opentype'); 
+    }
+
+    body {
+    font-family: 'MinecraftFont', monospace;
+    image-rendering: pixelated; /* Keeps pixel text perfectly sharp */
+    }
+
