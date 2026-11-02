@@ -94,5 +94,6 @@
     body {
     font-family: 'MinecraftFont', monospace;
     image-rendering: pixelated; /* Keeps pixel text perfectly sharp */
+    cursor: url("images/cursor.png") 32 32, auto;
     }
 
