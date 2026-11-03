@@ -214,36 +214,35 @@
 
     .social-links {
       text-align: left;
-      color:rgba(47, 47, 47, 0.95)
+      color: rgba(47, 47, 47, 0.95);
     }
 
     .social-links a {
       color: rgba(47, 47, 47, 0.95);
       display: flex;
-      text-decoration: none
-
+      text-decoration: none;
     }
 
     .social-links a:hover {
-      color:#e02020
+      color: #e02020;
     }
 
     .pages {
-    text-align: right;  
-}
+      text-align: right;  
+    }
 
+    .pages a {
+      color: rgba(47, 47, 47, 0.95);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.2rem;
+      transition: color 0.2s;
+    }
 
-.pages a {
-  color: rgba(47, 47, 47, 0.95);
-  text-decoration: none;
-  display: block;
-  margin-bottom: 0.2rem; /* Controls the exact space between each link. Change to 0px if you want them touching. */
-  transition: color 0.2s;
-}
+    .pages a:hover {
+      color: #e02020;
+    }
 
-.pages a:hover {
-  color: #e02020;
-}
     .copyright {
       grid-column: 1 / -1;
       text-align: center;
@@ -267,10 +266,9 @@
       flex-wrap: wrap;
     }
 
-    footer p{
+    footer p {
       color: #ffffff;
     }
-
 
     @media (max-width: 768px) {
       header {
@@ -293,8 +291,8 @@
         <li><a href="https://www.cuboidmc.com">Home</a></li>
         <li><a href="https://www.cuboidmc.com/projects">Projects</a></li>
         <li><a href="https://www.cuboidmc.com/blog">Blog</a></li>
-        <li><a href="https://www.cuboidmc.com#team">Team</a></li>
-        <li><a href="https://www.cuboidmc.com#contact">Contact</a></li>
+        <li><a href="https://www.cuboidmc.com/#team">Team</a></li>
+        <li><a href="https://www.cuboidmc.com/#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -307,28 +305,41 @@
     <h1 class="page-title">CuboidMC <span>Projects</span></h1>
     <p class="page-subtitle">Explore our collection of Minecraft mods, Hypixel Housing experiences, plugins, and custom creations.</p>
 
-
+    <!-- SECTION: HYPIXEL HOUSINGS -->
     <div class="project-category-section">
       <h2 class="category-title">🚪 Hypixel Housings</h2>
       <div class="projects-grid">
 
         <!-- The Backrooms Experience -->
         <div class="project-card">
-        <img src="https://www.cuboidmc.com/images/TBE/bg.png" alt="The Backrooms Banner" class="project-card-image">
-        <div class="project-card-content">
-          <div>
-            <span class="tag">Hypixel Housing</span>
-            <h3>The Backrooms Experience | 2.0</h3>
-            <p>An immersive Hypixel Housing experience that brought the horrifing BACKROOMS to Minecraft.</p>
+          <img src="https://www.cuboidmc.com/images/TBE/bg.png" alt="The Backrooms Banner" class="project-card-image">
+          <div class="project-card-content">
+            <div>
+              <span class="tag">Hypixel Housing</span>
+              <h3>The Backrooms Experience | 2.0</h3>
+              <p>An immersive Hypixel Housing experience that brought the horrifying BACKROOMS to Minecraft.</p>
+            </div>
+            <a href="https://www.cuboidmc.com/projects/housings/backrooms" class="btn btn-small">View Project &rarr;</a>
           </div>
-          <a href="https://www.cuboidmc.com/projects/housings/backrooms" class="btn btn-small">View Project &rarr;</a>
         </div>
-      </div>
+
+        <!-- PvP World -->
+        <div class="project-card">
+          <img src="https://www.cuboidmc.com/images/pvp-world/image-2.png" alt="pvp-world Banner" class="project-card-image">
+          <div class="project-card-content">
+            <div>
+              <span class="tag">Hypixel Housing</span>
+              <h3>PvP World</h3>
+              <p>A Minecraft PvP Hypixel Housing.</p>
+            </div>
+            <a href="https://www.cuboidmc.com/projects/housings/pvp-world" class="btn btn-small">View Project &rarr;</a>
+          </div>
+        </div>
 
       </div>
     </div>
 
-    <!-- SECTION 1: IN DEVELOPMENT -->
+    <!-- SECTION: IN DEVELOPMENT -->
     <div class="project-category-section">
       <h2 class="category-title">⚡ In Development</h2>
       <div class="projects-grid">
@@ -367,7 +378,7 @@
   </main>
 
   <!-- Footer -->
-    <footer>
+  <footer>
     <div class="social-links">
       <p>Social Links:</p>
       <a href="https://www.youtube.com/@Cuboid-MC">Youtube</a>
@@ -382,7 +393,7 @@
       <a href="https://www.cuboidmc.com/#team">Team</a>
     </div>
     <div class="copyright">
-    <p>&copy; 2026 CuboidMC. All rights reserved. Not affiliated with Mojang Studios.</p>
+      <p>&copy; 2026 CuboidMC. All rights reserved. Not affiliated with Mojang Studios.</p>
     </div>
   </footer>
 
