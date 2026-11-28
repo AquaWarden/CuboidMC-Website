@@ -111,11 +111,21 @@
       font-size: 1.1rem;
     }
 
+    /* Section Headings */
+    .section-heading {
+      font-family: var(--font-pixel);
+      font-size: 1.8rem;
+      color: var(--text-white);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
     /* Blog Grid */
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
+      margin-bottom: 3.5rem;
     }
 
     .blog-card {
@@ -172,14 +182,43 @@
       line-height: 1.5;
     }
 
-    .no-other-posts {
+    /* Footer */
+    footer {
       text-align: center;
-      text-decoration: wavy;
-      color: #e02020;
-      display: block;
-      
+      padding: 2rem;
+      border-top: 1px solid #282828;
+      color: var(--text-gray);
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
     }
 
+    .social-links a, .pages a {
+      color: var(--text-gray);
+      display: block;
+      text-decoration: none;
+      margin-bottom: 0.3rem;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover, .pages a:hover {
+      color: #e02020;
+    }
+
+    .copyright {
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #282828;
+      padding-top: 1.5rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+
+    footer p {
+      color: #ffffff;
+    }
 
     @media (max-width: 768px) {
       header {
@@ -216,29 +255,40 @@
     <h1 class="page-title">CuboidMC <span>Blog</span></h1>
     <p class="page-subtitle">Behind-the-scenes updates, project announcements, and development logs.</p>
 
-
-
-    <!-- Latest blog post-->
+    <!-- Latest Blog Post -->
+    <h2 class="section-heading">Latest Post</h2>
     <div class="blog-grid">
+      <div class="blog-card">
+        <img src="https://www.cuboidmc.com/images/pvp-world/image-4.png" alt="cuboidmc image" class="blog-card-image">
+        <div class="blog-card-content">
+          <div>
+            <div class="blog-meta">Devlog &bull;</div>
+            <h3>PvP World | Playtest 2</h3>
+            <p>PvP World's <strong>second</strong> playtest is here!</p>
+          </div>
+          <a href="article/2026/pvp-world-playtest-2" class="btn btn-small">View Post &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Blog Posts Grid (Side-by-Side) -->
+    <h2 class="section-heading">Other Blog Posts</h2>
+    <div class="blog-grid">
+      
+      <!-- Card 1 -->
       <div class="blog-card">
         <img src="https://www.cuboidmc.com/images/pvp-world/image-2.png" alt="cuboidmc image" class="blog-card-image">
         <div class="blog-card-content">
           <div>
             <div class="blog-meta">Devlog &bull;</div>
             <h3>PvP World | Playtest 1</h3>
-            <p>PvP World's fist playtest is here!</p>
+            <p>PvP World's first playtest is here!</p>
           </div>
           <a href="article/2026/pvp-world-playtest-1" class="btn btn-small">View Post &rarr;</a>
         </div>
       </div>
 
-    </div>
-
-    <br></br>
-    <br></br>
-    <h2>Other blog posts:</h2>
-    <!-- Blog Posts Grid -->
-    <div class="blog-grid">
+      <!-- Card 2 -->
       <div class="blog-card">
         <img src="https://www.cuboidmc.com/images/pvp-world/image-1.png" alt="cuboidmc image" class="blog-card-image">
         <div class="blog-card-content">
@@ -249,13 +299,13 @@
           </div>
           <a href="article/2026/pvp-world-announcement" class="btn btn-small">View Post &rarr;</a>
         </div>
-
+      </div>
 
     </div>
   </main>
 
   <!-- Footer -->
-    <footer>
+  <footer>
     <div class="social-links">
       <p>Social Links:</p>
       <a href="https://www.youtube.com/@Cuboid-MC">Youtube</a>
@@ -270,7 +320,7 @@
       <a href="https://www.cuboidmc.com/#team">Team</a>
     </div>
     <div class="copyright">
-    <p>&copy; 2026 CuboidMC. All rights reserved. Not affiliated with Mojang Studios.</p>
+      <p>&copy; 2026 CuboidMC. All rights reserved. Not affiliated with Mojang Studios.</p>
     </div>
   </footer>
 
